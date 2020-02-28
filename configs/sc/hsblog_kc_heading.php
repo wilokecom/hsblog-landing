@@ -23,6 +23,12 @@ return [
                     'label' => 'Description'
                 ],
                 [
+                    'type'  => 'text',
+                    'name'  => 'extra_class',
+                    'label' => 'Container Class',
+                    'value' => ''
+                ],
+                [
                     'type'    => 'select',
                     'name'    => 'alignment',
                     'label'   => 'Alignment',
