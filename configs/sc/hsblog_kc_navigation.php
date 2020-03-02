@@ -1,7 +1,7 @@
 <?php
 return [
-    'hsblog_kc_button' => [
-        'name'     => 'Button',
+    'hsblog_kc_navigation' => [
+        'name'     => 'Navigation',
         'icon'     => 'sl-paper-plane',
         'css_box'  => true,
         'category' => HSBLOG_SC_CATEGORY,
