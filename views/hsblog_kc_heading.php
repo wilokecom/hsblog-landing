@@ -29,6 +29,6 @@ $atts = shortcode_atts(
             <h2 style="color: <?php echo esc_attr($atts['heading_color']); ?>; margin-top: 0px"
                 class="<?php echo esc_attr('page-title__main-title page-title__main-title--'.$atts['alignment']); ?>">
                 <?php echo esc_html($atts['heading']); ?>
-            </h2>
+            </h2> 
         </div>
 <?php
