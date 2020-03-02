@@ -6,7 +6,7 @@ const body = document.querySelector("body");
 const mainContent = document.querySelector("#content");
 const nav = document.querySelector(".wil-nav");
 const navMenu = nav && nav.querySelector(".nav__menu");
-const collapseButton = nav.querySelector(".nav__collapse-btn");
+const collapseButton = nav && nav.querySelector(".nav__collapse-btn");
 const navOverlay = createElement("div", "nav__overlay");
 const defaultProps = {
   typeAnimation: "scale-down-pusher"
@@ -35,7 +35,7 @@ function toggleMenu({ typeAnimation } = defaultProps) {
     mainContent.classList.toggle(`content--collapsed-${typeAnimation}`);
   };
 }
-collapseButton.addEventListener("click", toggleMenu());
+collapseButton && collapseButton.addEventListener("click", toggleMenu());
 function closeMenu({ typeAnimation } = defaultProps) {
   return () => {
     navMenu &&
