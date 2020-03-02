@@ -21,9 +21,9 @@ $atts = shortcode_atts(
            <i class="fas fa-bars" aria-hidden="true"></i></label>
         <ul class="nav__menu">
           <li class="nav__item"><a class="nav__link" href="<?php echo $atts['nav1_url'] ?>"><?php echo $atts['nav1_text'] ?></a></li>
-          <li class="nav__item"><a class="nav__link" href="<?php echo $atts['nav2_url'] ?>"><?php echo $atts['nav2_url'] ?></a></li>
-          <li class="nav__item"><a class="nav__link" href="<?php echo $atts['nav3_url'] ?>"><?php echo $atts['nav3_url'] ?></a></li>
-          <li class="nav__item"><a class="nav__link" href="<?php echo $atts['nav4_url'] ?>" style="color: #FE2F57"><?php echo $atts['nav4_url'] ?></a></li>
+          <li class="nav__item"><a class="nav__link" href="<?php echo $atts['nav2_url'] ?>"><?php echo $atts['nav2_text'] ?></a></li>
+          <li class="nav__item"><a class="nav__link" href="<?php echo $atts['nav3_url'] ?>"><?php echo $atts['nav3_text'] ?></a></li>
+          <li class="nav__item"><a class="nav__link" href="<?php echo $atts['nav4_url'] ?>" style="color: #FE2F57"><?php echo $atts['nav4_text'] ?></a></li>
         </ul>
         <div class="logo">
             <a href="<?php echo $atts['logo_href'] ?>">
