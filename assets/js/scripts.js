@@ -3,6 +3,7 @@
 (function () {
   jQuery(document).ready(function () {
 // Nav
+
     const body = document.querySelector("body");
     const mainContent = document.querySelector("#content");
     const nav = document.querySelector(".wil-nav");
@@ -176,6 +177,3 @@
   });
 })(jQuery);
 // Change Section
-
-
-
