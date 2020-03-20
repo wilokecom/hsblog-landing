@@ -55,6 +55,7 @@ class RegisterShortcodes
                 
                 $aConfiguration[$key] = $aScItem;
             }
+            
             $kc->add_map($aConfiguration);
         }
     }
