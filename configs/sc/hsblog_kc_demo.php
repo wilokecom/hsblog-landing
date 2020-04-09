@@ -17,6 +17,11 @@ return [
                     'name'  => 'image',
                     'label' => 'Image'
                 ],
+                [
+                    'type'  => 'text',
+                    'name'  => 'extra_class',
+                    'label' => 'Container Class',
+                ],
             ]
         ]
     ]

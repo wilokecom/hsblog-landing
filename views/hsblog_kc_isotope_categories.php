@@ -64,7 +64,7 @@ if (!empty($aNavigations)) :
 
     ?>
     <div class="wil-isotope-wrapper">
-        <div class="wil-sort button-group">
+        <div class="wil-sort button-group button-group-scrolling mb-57">
             <?php foreach ($aNavigations as $filter => $name) : ?>
                 <button class="wil-btn wil-btn--white wil-btn--round wil-btn--md wil-btn--bold button <?php echo $order === 1 ? 'is-checked' : ''; ?>"
                         data-filter="<?php echo esc_attr('.'.$filter); ?>">
@@ -85,8 +85,8 @@ if (!empty($aNavigations)) :
                         <a href="<?php echo esc_url(get_permalink($oPage->ID)); ?>">
                             <?php echo get_the_post_thumbnail($oPage->ID, 'large'); ?>
                             <div class="link  link--white link--bold link--cabin pt-20">
-                                <h2><?php echo get_the_title($oPage->ID); ?></h2>
-                                <?php if (!empty($tagLine = get_post_meta($oPage->ID, 'tag_line'))) : ?>
+                                <?php echo get_the_title($oPage->ID);
+                                if (!empty($tagLine = get_post_meta($oPage->ID, 'tag_line'))) : ?>
                                     <p class="tagline"><?php echo $tagLine ?></p>
                                 <?php endif; ?>
                             </div>
