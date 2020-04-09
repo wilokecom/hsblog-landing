@@ -2749,3 +2749,13 @@ span.text--medium,
 .wil-isotope-wrapper .wil-grid .grid-item:hover h2 {
     color: #ff6a28;
 }
+.demo {
+    margin-bottom: 15px;
+    text-align: center; }
+.demo img {
+    border-radius: 5px; }
+.demo .link {
+    -webkit-transition: 0.3s color;
+    transition: 0.3s color; }
+.demo:hover .link {
+    color: #FF6A28; }

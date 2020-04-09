@@ -29,6 +29,12 @@ return [
                     'value' => ''
                 ],
                 [
+                    'type'  => 'text',
+                    'name'  => 'heading_class',
+                    'label' => 'Heading Class',
+                    'value' => ''
+                ],
+                [
                     'type'    => 'select',
                     'name'    => 'alignment',
                     'label'   => 'Alignment',

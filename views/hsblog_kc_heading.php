@@ -7,6 +7,7 @@ $atts = shortcode_atts(
         'alignment'         => '',
         'heading_color'     => '',
         'sup_heading_color' => '',
+        'heading_class'     => '',
         'divide_color'      => '',
         'extra_class'       => '',
         '_id'               => ''
@@ -28,7 +29,8 @@ $atts = shortcode_atts(
             </div>
         <?php endif; ?>
         <h2 style="color: <?php echo esc_attr($atts['heading_color']); ?>; margin-top: 0px"
-            class="<?php echo esc_attr('page-title__main-title page-title__main-title--'.$atts['alignment']); ?>">
+            class="<?php echo esc_attr('page-title__main-title page-title__main-title--'
+                                       .$atts['alignment'].' '.$atts['heading_class']); ?>">
             <?php echo esc_html($atts['heading']); ?>
         </h2>
     </div>

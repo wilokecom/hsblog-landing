@@ -10,7 +10,6 @@ $atts = shortcode_atts(
     ],
     $atts
 );
-
 ?>
     <a class="<?php echo $atts['link_class'] ?>" href="<?php echo $atts['link_url'] ?>">
         <?php if (!empty($atts['icon_url'])) : ?>
@@ -23,4 +22,4 @@ $atts = shortcode_atts(
             <?php echo $atts['text'] ?>
         <?php endif; ?>
     </a>
-<?php
+
