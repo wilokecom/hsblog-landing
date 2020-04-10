@@ -50,7 +50,13 @@ return [
                     'label'  => 'Settings',
                     'name'   => 'group',
                     'params' => $aFields
-                ]
+                ],
+                [
+                    'type'  => 'text',
+                    'name'  => 'extra_class',
+                    'label' => 'Extra Class',
+                    'value' => ''
+                ],
             ]
         ]
     ]

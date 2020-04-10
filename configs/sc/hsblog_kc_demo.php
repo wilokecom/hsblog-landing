@@ -20,7 +20,7 @@ return [
                 [
                     'type'  => 'text',
                     'name'  => 'extra_class',
-                    'label' => 'Container Class',
+                    'label' => 'Extra Class',
                 ],
             ]
         ]

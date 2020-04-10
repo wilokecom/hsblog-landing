@@ -6,6 +6,7 @@ $atts = shortcode_atts(
     [
         'group'   => '',
         'site_id' => '',
+        'extra_class'=>'',
         '_id'     => ''
     ],
     $atts
@@ -61,10 +62,9 @@ foreach ($atts['group'] as $oGroup) {
 
 if (!empty($aNavigations)) :
     $order = 1;
-
     ?>
     <div class="wil-isotope-wrapper">
-        <div class="wil-sort button-group button-group-scrolling mb-57">
+        <div class="<?php echo esc_attr('wil-sort button-group '.$atts['extra_class'])?>">
             <?php foreach ($aNavigations as $filter => $name) : ?>
                 <button class="wil-btn wil-btn--white wil-btn--round wil-btn--md wil-btn--bold button <?php echo $order === 1 ? 'is-checked' : ''; ?>"
                         data-filter="<?php echo esc_attr('.'.$filter); ?>">
