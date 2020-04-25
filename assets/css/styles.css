@@ -2555,15 +2555,25 @@ textarea {
     font-family: "Cabin", sans-serif;
     color: rgba(0, 0, 0, 0.4);
 }
-
+.text span {
+    font-size: 14px;
+    font-family: "Cabin", sans-serif;
+    color: rgba(0, 0, 0, 0.4);
+}
 @media (min-width: 400px) {
     .text {
+        font-size: calc(0.25vw + 13px);
+    }
+    .text span {
         font-size: calc(0.25vw + 13px);
     }
 }
 
 @media (min-width: 1200px) {
     .text {
+        font-size: 16px;
+    }
+    .text span {
         font-size: 16px;
     }
 }
