@@ -25,7 +25,7 @@
        */
 
       function toggleMenu({typeAnimation} = defaultProps) {
-        nav.classList.toggle(typeAnimation);
+        nav.classList.add(typeAnimation);
         nav.appendChild(navOverlay);
         window.addEventListener("resize", () => {
           if (window.innerWidth >= 768) {
