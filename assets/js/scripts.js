@@ -36,7 +36,6 @@
           navMenu.classList.toggle(`nav__menu--collapsed-${typeAnimation}`);
           navOverlay.classList.toggle("show");
           navOverlay.addEventListener("click", closeMenu({typeAnimation}));
-          mainContent.classList.toggle(`content--collapsed-${typeAnimation}`);
         };
       }
 
@@ -44,7 +43,6 @@
         return () => {
           navMenu.classList.remove(`nav__menu--collapsed-${typeAnimation}`);
           navOverlay.classList.remove("show");
-          mainContent.classList.remove(`content--collapsed-${typeAnimation}`);
         };
       }
 
@@ -150,6 +148,31 @@
       const video = new VideoPopup(dataSrc);
       video.showPopUp();
     }));
+
+
+    // Section Demo
+
+    const backgroundUrl = {
+      musicdemo: 'https://images.pexels.com/photos/3683056/pexels-photo-3683056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 1x, https://images.pexels.com/photos/3683056/pexels-photo-3683056.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500 2',
+      fashiondemo: 'https://images.pexels.com/photos/4108271/pexels-photo-4108271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 1x, https://images.pexels.com/photos/4108271/pexels-photo-4108271.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500 2x',
+      bueatydemo: 'https://images.pexels.com/photos/3989816/pexels-photo-3989816.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 1x, https://images.pexels.com/photos/3989816/pexels-photo-3989816.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500 2x',
+      fooddemo: 'https://images.pexels.com/photos/1713953/pexels-photo-1713953.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 1x, https://images.pexels.com/photos/1713953/pexels-photo-1713953.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500 2x',
+      techdemo: 'https://images.pexels.com/photos/3024995/pexels-photo-3024995.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 1x, https://images.pexels.com/photos/3024995/pexels-photo-3024995.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500 2x',
+    }
+
+    const sectionDemos = document.querySelector('.section-demos');
+    const buttonsFilter = sectionDemos ? [...sectionDemos.querySelectorAll('.wil-btn')] : undefined;
+    if(!!buttonsFilter) {
+      buttonsFilter.forEach(btn => {
+        const attr = btn.getAttribute('data-filter');
+        btn.addEventListener('click', () => {
+          sectionDemos.style.backgroundImage = `url('${backgroundUrl[attr.slice(1, attr.length)]}')`
+        })
+      })    
+    }
+
+
+
 
     var $isotope = jQuery('.wil-isotope-wrapper');
     $isotope.each(function () {
