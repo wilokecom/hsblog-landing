@@ -9,7 +9,7 @@
  */
 
 require_once plugin_dir_path(__FILE__).'vendor/autoload.php';
-define('HSBLOG_LANDING_VERSION', '1.1');
+define('HSBLOG_LANDING_VERSION', '1.3');
 define('HSBLOG_LANDING_DIR', plugin_dir_path(__FILE__));
 define('HSBLOG_LANDING_URL', plugin_dir_url(__FILE__));
 define('HSBLOG_LANDING_JS_URL', plugin_dir_url(__FILE__).'assets/js/');
