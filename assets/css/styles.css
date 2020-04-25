@@ -629,12 +629,6 @@ body {
     font-weight: 400;
 }
 
-@media (max-width: 768px) {
-    body {
-        overflow: hidden;
-    }
-}
-
 ul li {
     list-style: none;
     font-size: 11px;
