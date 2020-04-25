@@ -36,7 +36,6 @@
           navMenu.classList.toggle(`nav__menu--collapsed-${typeAnimation}`);
           navOverlay.classList.toggle("show");
           navOverlay.addEventListener("click", closeMenu({typeAnimation}));
-          mainContent.classList.toggle(`content--collapsed-${typeAnimation}`);
         };
       }
 
@@ -44,7 +43,6 @@
         return () => {
           navMenu.classList.remove(`nav__menu--collapsed-${typeAnimation}`);
           navOverlay.classList.remove("show");
-          mainContent.classList.remove(`content--collapsed-${typeAnimation}`);
         };
       }
 
@@ -163,13 +161,15 @@
     }
 
     const sectionDemos = document.querySelector('.section-demos');
-    const buttonsFilter = [...sectionDemos.querySelectorAll('.wil-btn')];
-    buttonsFilter.forEach(btn => {
-      const attr = btn.getAttribute('data-filter');
-      btn.addEventListener('click', () => {
-        sectionDemos.style.backgroundImage = `url('${backgroundUrl[attr.slice(1, attr.length)]}')`
-      })
-    })    
+    const buttonsFilter = sectionDemos ? [...sectionDemos.querySelectorAll('.wil-btn')] : undefined;
+    if(!!buttonsFilter) {
+      buttonsFilter.forEach(btn => {
+        const attr = btn.getAttribute('data-filter');
+        btn.addEventListener('click', () => {
+          sectionDemos.style.backgroundImage = `url('${backgroundUrl[attr.slice(1, attr.length)]}')`
+        })
+      })    
+    }
 
 
 
