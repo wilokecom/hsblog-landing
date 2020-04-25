@@ -1832,17 +1832,10 @@ textarea {
     }
 }
 
-@media (min-width: 763px) {
+@media (min-width: 576px) {
     .mock-up--rotate-right {
-        -webkit-transform: rotate(16deg) translate(-41.63%, 2%);
-        transform: rotate(16deg) translate(-41.63%, 2%);
-    }
-}
-
-@media (min-width: 1201px) {
-    .mock-up--rotate-right {
-        -webkit-transform: rotate(16deg) translate(-41.63%, 2.5%);
-        transform: rotate(16deg) translate(-41.63%, 2.5%);
+        -webkit-transform: rotate(16deg) translate(-28.63%, 5.5%);
+        transform: rotate(16deg) translate(-28.63%, 5.5%);
     }
 }
 
