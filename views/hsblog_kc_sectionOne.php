@@ -5,6 +5,7 @@ $atts = shortcode_atts(
         'title'     => '',
         'sub_title' => '',
         'video_url' => '',
+        'content' => '',
         'img_pos'   => '',
         'btn_text'  => '',
         'btn_link'  => '',
@@ -35,6 +36,9 @@ $atts = shortcode_atts(
                     <h2 class="page-title__main-title page-title__main-title--sm page-title__main-title--bold">
                         <?php echo esc_attr($atts['title']); ?>
                     </h2>
+                    <span>
+                    <?php echo esc_attr($atts['content']); ?>
+                    </span>
                     <?php if (!empty($atts['btn_text'])) : ?>
                         <a href="<?php echo esc_attr($atts['btn_link']); ?>"
                            class="wil-btn wil-btn--border wil-btn--pill wil-btn--sm wil-btn--semibold wil-btn--poppins">

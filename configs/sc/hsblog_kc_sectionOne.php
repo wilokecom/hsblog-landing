@@ -29,6 +29,11 @@ return [
                 ],  
                 [
                     'type'  => 'text',
+                    'name'  => 'content',
+                    'label' => 'Content',
+                ],  
+                [
+                    'type'  => 'text',
                     'name'  => 'img_pos',
                     'label' => 'Image Position',
                 ],  
