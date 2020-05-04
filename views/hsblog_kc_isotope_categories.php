@@ -4,10 +4,11 @@ use HSBlogLanding\Helpers\SCHelper;
 
 $atts = shortcode_atts(
     [
-        'group'   => '',
+        'group' => '',
         'site_id' => '',
-        'extra_class'=>'',
-        '_id'     => ''
+        'extra_class' => '',
+        'bg_img_url' => '',
+        '_id' => ''
     ],
     $atts
 );
@@ -44,15 +45,15 @@ foreach ($atts['group'] as $oGroup) {
             'post_type'    => 'page'
         ]
     );
+
     $oTerm  = get_term($aCatId[0]);
-    
     if (!empty($aPages) && !is_wp_error($aPages) && !is_wp_error($oTerm)) {
         $aItems[$oTerm->slug] = [
             'items'   => $aPages,
             'site_id' => isset($oGroup->site_id) ? $oGroup->site_id : 0
         ];
-    
-        $aNavigations[$oTerm->slug] = $oTerm->name; 
+
+        $aNavigations[$oTerm->slug] = $oTerm->name;
     }
     
     if ($isMultiSite) {
@@ -67,7 +68,7 @@ if (!empty($aNavigations)) :
         <div class="<?php echo esc_attr('wil-sort button-group '.$atts['extra_class'])?>">
             <?php foreach ($aNavigations as $filter => $name) : ?>
                 <button class="wil-btn wil-btn--white wil-btn--round wil-btn--md wil-btn--bold button <?php echo $order === 1 ? 'is-checked' : ''; ?>"
-                        data-filter="<?php echo esc_attr('.'.$filter); ?>">
+                        data-filter="<?php echo esc_attr('.'.$filter); ?>" data-bg="<?php echo esc_attr($atts['bg_img_url']);?>">
                     <?php echo esc_html($name); ?>
                 </button>
                 <?php $order++; endforeach; ?>

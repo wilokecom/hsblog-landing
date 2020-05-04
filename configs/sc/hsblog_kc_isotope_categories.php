@@ -57,6 +57,11 @@ return [
                     'label' => 'Extra Class',
                     'value' => ''
                 ],
+                [
+                    'type'  => 'attach_image_url',
+                    'name'  => 'bg_img_url',
+                    'label' => 'Background Image'
+                ],
             ]
         ]
     ]
