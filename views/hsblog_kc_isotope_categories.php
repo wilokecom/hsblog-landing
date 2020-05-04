@@ -46,7 +46,7 @@ foreach ($atts['group'] as $oGroup) {
     );
     $oTerm  = get_term($aCatId[0]);
     
-    if (!empty($aPages) && !is_wp_error($aPages)) {
+    if (!empty($aPages) && !is_wp_error($aPages) && !is_wp_error($oTerm)) {
         $aItems[$oTerm->slug] = [
             'items'   => $aPages,
             'site_id' => isset($oGroup->site_id) ? $oGroup->site_id : 0
